@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2e4036" />
+    <meta
+      name="description"
+      content="Build a fictional patient's meal, inspect portion calculations, and approve a printable diet chart."
+    />
+    <title>AyuDiet Connect — The practitioner's desk</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="assets/gsap.min.js"></script>
+    <script defer src="assets/ScrollTrigger.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <svg class="symbols" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="leaf" viewBox="0 0 40 40">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.45"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M20 34C6 32 3 22 4 12c9 1 15 7 16 19M20 34c14-2 17-12 16-22-9 1-15 7-16 19"
+          />
+          <path
+            d="M20 32C11 22 14 12 20 4c7 9 9 18 0 28Zm0 2V14M8 18l10 12m14-12L22 30"
+          />
+        </g>
+      </symbol>
+    </svg>
+    <a class="skip" href="#workspace">Skip to workspace</a>
+    <header>
+      <nav aria-label="Main">
+        <a class="brand" href="#top"
+          ><svg aria-hidden="true"><use href="#leaf" /></svg>AyuDiet
+          <i>Connect</i></a
+        >
+        <div class="navlinks">
+          <a href="#workspace">Workspace</a><a href="#workflow">Workflow</a
+          ><a href="#plans">Proposed plans</a>
+        </div>
+        <a class="navcta" href="#workspace">Open demo</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-photo"></div>
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span>Ayurvedic diet planning</div>
+          <h1>Build the meal.<em>Review every portion.</em></h1>
+          <p>
+            Prepare a patient’s diet chart in one workspace. Adjust food
+            portions, see nutrition totals alongside Ayurvedic food attributes,
+            and approve the plan before sharing.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#workspace"
+              >Try the practitioner demo</a
+            ><a class="button ghost" href="#workflow">See the workflow</a>
+          </div>
+        </div>
+        <div class="hero-foot">
+          <span><b class="dot"></b> Browser-local demo</span
+          ><span>Practitioner’s workspace</span>
+        </div>
+      </section>
+      <section id="workspace" class="paper section">
+        <div class="eyebrow ink"><span></span>Practitioner workspace</div>
+        <h2>The meal <em>desk.</em></h2>
+        <p class="sub">Browser-local demo · Fictional patients</p>
+        <div class="desk">
+          <article>
+            <h3>Patient &amp; meal</h3>
+            <div class="field">
+              <label for="patients">Fictional patient</label
+              ><select id="patients"></select>
+            </div>
+            <p id="bio"></p>
+            <button id="newPatient" class="textbtn">
+              Create fictional profile
+            </button>
+            <hr />
+            <div class="row">
+              <h4>Lunch bowl</h4>
+              <span id="weight"></span>
+            </div>
+            <div id="plate" aria-label="Ingredients in the meal"></div>
+            <div id="ingredients"></div>
+            <div class="add">
+              <label for="library">Seven-food library</label>
+              <div>
+                <select id="library"></select
+                ><button id="add">Add</button>
+              </div>
+            </div>
+          </article>
+          <article>
+            <h3>Portion calculator</h3>
+            <div class="eyebrow small">Sample food record</div>
+            <h4 id="foodTitle"></h4>
+            <div id="attrs"></div>
+            <div id="formula"></div>
+            <table>
+              <caption>
+                Nutrient breakdown
+              </caption>
+              <thead>
+                <tr>
+                  <th>Nutrient</th>
+                  <th>Portion</th>
+                  <th>Plan</th>
+                </tr>
+              </thead>
+              <tbody id="nutrition"></tbody>
+            </table>
+            <p id="activity" role="status" aria-live="polite"></p>
+          </article>
+          <article>
+            <div class="row">
+              <h3>Chart review</h3>
+              <span id="status" class="badge"></span>
+            </div>
+            <div id="preview"></div>
+            <button class="primary" id="review">Review and approve</button
+            ><button id="export" disabled>Print / Save PDF</button>
+          </article>
+        </div>
+      </section>
+      <section class="philosophy">
+        <div>
+          <p>“How much nutrition does this portion provide?”</p>
+          <p><em>“Does this plan fit my patient?”</em></p>
+          <div>
+            AyuDiet Connect calculates the portions. The practitioner reviews
+            the foods, the Ayurvedic attributes, and the finished plan.
+          </div>
+        </div>
+      </section>
+      <section id="workflow" class="section">
+        <div class="eyebrow ink"><span></span>Workflow</div>
+        <h2>From bowl to <em>chart.</em></h2>
+        <div class="archive">
+          <article class="step">
+            <div>
+              <h3>Prepare the meal</h3>
+              <p>
+                Choose a food and enter its weight. Each ingredient in the bowl
+                has a matching row in the meal chart.
+              </p>
+            </div>
+            <div class="example">
+              <h4>Lunch bowl</h4>
+              <div class="mini-bowl" aria-hidden="true">
+                <i></i><i></i><i></i>
+              </div>
+              <div class="archive-rows"></div>
+            </div>
+          </article>
+          <article class="step">
+            <div>
+              <h3>Inspect the calculation</h3>
+              <p>
+                Follow the portion from the sample food record to its
+                contribution to the plan.
+              </p>
+            </div>
+            <div class="example">
+              <h4>Cooked mung beans</h4>
+              <p class="big-mono">71 × 180 ÷ 100</p>
+              <strong class="result">127.8 kcal</strong>
+              <p>
+                <i>Rasa</i> · Sweet, astringent &nbsp; <i>Virya</i> · Cooling
+              </p>
+            </div>
+          </article>
+          <article class="step">
+            <div>
+              <h3>Approve the chart</h3>
+              <p>
+                Inspect the current portions and confirm the chart. The approved
+                version is ready for the patient.
+              </p>
+              <a class="button primary" href="#workspace"
+                >Try this in the workspace</a
+              >
+            </div>
+            <div class="example sheet">
+              <span class="badge">Approved example</span>
+              <h4>Mira Shah</h4>
+              <p>Lunch · Diet chart</p>
+              <div class="archive-rows"></div>
+              <p id="exampleTotal"></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="plans" class="section">
+        <div class="eyebrow ink"><span></span>Proposed plans</div>
+        <h2>Proposed clinic <em>subscriptions.</em></h2>
+        <p class="sub">Monthly price points proposed for pilot testing.</p>
+        <div class="prices">
+          <article>
+            <h3>Starter</h3>
+            <strong>₹299</strong><small>/month</small>
+            <p>Solo-practice profiles and nutrient analysis</p>
+          </article>
+          <article>
+            <h3>Professional</h3>
+            <strong>₹699</strong><small>/month</small>
+            <p>Diet-plan drafts, printable plans, and follow-up tools</p>
+            <a class="button primary" href="#workspace">Explore the demo</a>
+          </article>
+          <article>
+            <h3>Clinic</h3>
+            <strong>₹1,499</strong><small>/month</small>
+            <p>Multi-practitioner workflows and retention reports</p>
+          </article>
+        </div>
+        <div class="road">
+          <h3>Planned development</h3>
+          <ul>
+            <li>Patient mobile app</li>
+            <li>Food-library expansion and validation</li>
+            <li>Secure clinic accounts</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="#top"
+        ><svg aria-hidden="true"><use href="#leaf" /></svg>AyuDiet
+        <i>Connect</i></a
+      >
+      <div>
+        <a href="#workspace">Workspace</a><a href="#workflow">Workflow</a
+        ><a href="#plans">Proposed plans</a>
+      </div>
+      <span><b class="dot"></b> Browser-local demo</span>
+    </footer>
+    <dialog id="profileDlg">
+      <form id="profileForm">
+        <h3>Create fictional profile</h3>
+        <label>Name<input name="name" required maxlength="60" /></label
+        ><label
+          >Age<input
+            name="age"
+            type="number"
+            min="1"
+            max="120"
+            required /></label
+        ><label
+          >Prakriti<select name="prakriti">
+            <option>Vata</option>
+            <option>Pitta</option>
+            <option>Kapha</option>
+            <option>Vata–Pitta</option>
+            <option>Pitta–Kapha</option>
+            <option>Vata–Kapha</option>
+            <option>Unspecified</option>
+          </select></label
+        ><label
+          >Practitioner notes<textarea
+            name="notes"
+            maxlength="400"
+          ></textarea></label
+        ><button class="primary">Create profile</button
+        ><button type="button" data-close>Cancel</button>
+      </form>
+    </dialog>
+    <dialog id="reviewDlg">
+      <h3>Review diet chart</h3>
+      <div id="inspection"></div>
+      <button id="confirm" class="primary">Confirm approval</button
+      ><button data-close>Back to workspace</button>
+    </dialog>
+    <div id="printSheet"></div>
+    <div class="grain"></div>
+  </body>
+</html>
