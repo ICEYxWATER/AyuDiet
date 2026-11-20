@@ -1,0 +1,1405 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "totalFoods": 49,
+    "categories": 7,
+    "sources": [
+      "IFCT 2017 – Indian Food Composition Tables (NIN, Hyderabad)",
+      "Kaggle – Indian Food Nutrition Dataset",
+      "Kaggle – Ayurvedic Indian Food Properties Dataset",
+      "USDA FoodData Central (cross-referenced)"
+    ],
+    "servingUnit": "per 100 g unless noted",
+    "lastUpdated": "2026-11-20"
+  },
+  "categories": [
+    {
+      "id": "grains",
+      "name": "Grains & Cereals",
+      "icon": "🌾",
+      "description": "Staple carbohydrates including rice, wheat, millets, and pulses"
+    },
+    {
+      "id": "vegetables",
+      "name": "Vegetables",
+      "icon": "🥬",
+      "description": "Fresh and cooked vegetables including leafy greens, roots, and gourds"
+    },
+    {
+      "id": "fruits",
+      "name": "Fruits",
+      "icon": "🍎",
+      "description": "Fresh seasonal and tropical fruits"
+    },
+    {
+      "id": "dairy",
+      "name": "Dairy & Alternatives",
+      "icon": "🥛",
+      "description": "Milk, yogurt, paneer, ghee, and plant-based alternatives"
+    },
+    {
+      "id": "proteins",
+      "name": "Proteins & Legumes",
+      "icon": "🫘",
+      "description": "Lentils, beans, chickpeas, tofu, eggs, and lean proteins"
+    },
+    {
+      "id": "spices",
+      "name": "Spices & Herbs",
+      "icon": "🌿",
+      "description": "Ayurvedic spices, herbs, and condiments used in healing and cooking"
+    },
+    {
+      "id": "oils_sweeteners",
+      "name": "Oils & Natural Sweeteners",
+      "icon": "🍯",
+      "description": "Healthy cooking oils, ghee, honey, jaggery, and natural sweeteners"
+    }
+  ],
+  "foods": [
+    {
+      "id": "GR001",
+      "name": "Basmati Rice (cooked)",
+      "nameHindi": "बासमती चावल",
+      "category": "grains",
+      "nutrition": {
+        "calories": 130,
+        "protein": 2.7,
+        "carbs": 28.2,
+        "fat": 0.3,
+        "fiber": 0.4,
+        "sugar": 0.1,
+        "calcium": 10,
+        "iron": 0.2,
+        "vitaminC": 0,
+        "potassium": 35
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Light", "Soft", "Smooth"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
+      },
+      "serving": { "size": 150, "unit": "g", "description": "1 cup cooked" },
+      "tags": ["gluten-free", "sattvic", "easy-to-digest"]
+    },
+    {
+      "id": "GR002",
+      "name": "Whole Wheat Roti",
+      "nameHindi": "गेहूं की रोटी",
+      "category": "grains",
+      "nutrition": {
+        "calories": 297,
+        "protein": 9.8,
+        "carbs": 56.4,
+        "fat": 3.6,
+        "fiber": 11.2,
+        "sugar": 0.4,
+        "calcium": 30,
+        "iron": 3.5,
+        "vitaminC": 0,
+        "potassium": 284
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Nourishing"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
+      },
+      "serving": { "size": 40, "unit": "g", "description": "1 medium roti" },
+      "tags": ["high-fiber", "sattvic", "staple"]
+    },
+    {
+      "id": "GR003",
+      "name": "Oats (cooked)",
+      "nameHindi": "ओट्स",
+      "category": "grains",
+      "nutrition": {
+        "calories": 71,
+        "protein": 2.5,
+        "carbs": 12.0,
+        "fat": 1.5,
+        "fiber": 1.7,
+        "sugar": 0.3,
+        "calcium": 9,
+        "iron": 0.6,
+        "vitaminC": 0,
+        "potassium": 61
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Warm"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
+      },
+      "serving": { "size": 160, "unit": "g", "description": "1 bowl cooked" },
+      "tags": ["high-fiber", "heart-healthy", "breakfast"]
+    },
+    {
+      "id": "GR004",
+      "name": "Ragi / Finger Millet",
+      "nameHindi": "रागी",
+      "category": "grains",
+      "nutrition": {
+        "calories": 328,
+        "protein": 7.3,
+        "carbs": 72.0,
+        "fat": 1.3,
+        "fiber": 3.6,
+        "sugar": 1.0,
+        "calcium": 344,
+        "iron": 3.9,
+        "vitaminC": 0,
+        "potassium": 408
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
+      },
+      "serving": { "size": 30, "unit": "g", "description": "2 tbsp flour" },
+      "tags": ["gluten-free", "calcium-rich", "millet"]
+    },
+    {
+      "id": "GR005",
+      "name": "Quinoa (cooked)",
+      "nameHindi": "क्विनोआ",
+      "category": "grains",
+      "nutrition": {
+        "calories": 120,
+        "protein": 4.4,
+        "carbs": 21.3,
+        "fat": 1.9,
+        "fiber": 2.8,
+        "sugar": 0.9,
+        "calcium": 17,
+        "iron": 1.5,
+        "vitaminC": 0,
+        "potassium": 172
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "neutral", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
+      },
+      "serving": { "size": 185, "unit": "g", "description": "1 cup cooked" },
+      "tags": ["complete-protein", "gluten-free", "superfood"]
+    },
+    {
+      "id": "GR006",
+      "name": "Poha / Flattened Rice",
+      "nameHindi": "पोहा",
+      "category": "grains",
+      "nutrition": {
+        "calories": 346,
+        "protein": 6.6,
+        "carbs": 77.3,
+        "fat": 1.2,
+        "fiber": 1.0,
+        "sugar": 0.2,
+        "calcium": 20,
+        "iron": 20.0,
+        "vitaminC": 0,
+        "potassium": 113
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Light", "Soft"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "neutral" },
+        "bestFor": ["Vata", "Pitta"]
+      },
+      "serving": { "size": 30, "unit": "g", "description": "1 cup (dry)" },
+      "tags": ["iron-rich", "quick-cook", "breakfast"]
+    },
+    {
+      "id": "GR007",
+      "name": "Jowar / Sorghum",
+      "nameHindi": "ज्वार",
+      "category": "grains",
+      "nutrition": {
+        "calories": 329,
+        "protein": 10.4,
+        "carbs": 67.7,
+        "fat": 1.7,
+        "fiber": 10.2,
+        "sugar": 2.5,
+        "calcium": 25,
+        "iron": 4.1,
+        "vitaminC": 0,
+        "potassium": 340
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
+      },
+      "serving": { "size": 30, "unit": "g", "description": "2 tbsp flour" },
+      "tags": ["gluten-free", "millet", "high-fiber"]
+    },
+    {
+      "id": "VG001",
+      "name": "Spinach / Palak",
+      "nameHindi": "पालक",
+      "category": "vegetables",
+      "nutrition": {
+        "calories": 23,
+        "protein": 2.9,
+        "carbs": 3.6,
+        "fat": 0.4,
+        "fiber": 2.2,
+        "sugar": 0.4,
+        "calcium": 99,
+        "iron": 2.7,
+        "vitaminC": 28.1,
+        "potassium": 558
+      },
+      "ayurveda": {
+        "rasa": ["Astringent", "Sweet"],
+        "guna": ["Light", "Dry", "Rough"],
+        "virya": "Cooling",
+        "vipaka": "Pungent",
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
+      },
+      "serving": { "size": 30, "unit": "g", "description": "1 cup raw" },
+      "tags": ["iron-rich", "leafy-green", "low-calorie"]
+    },
+    {
+      "id": "VG002",
+      "name": "Bottle Gourd / Lauki",
+      "nameHindi": "लौकी",
+      "category": "vegetables",
+      "nutrition": {
+        "calories": 15,
+        "protein": 0.6,
+        "carbs": 3.4,
+        "fat": 0.02,
+        "fiber": 0.5,
+        "sugar": 2.0,
+        "calcium": 26,
+        "iron": 0.2,
+        "vitaminC": 10.1,
+        "potassium": 150
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Light", "Smooth", "Cool"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "neutral", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
+      },
+      "serving": { "size": 100, "unit": "g", "description": "½ cup diced" },
+      "tags": ["hydrating", "low-calorie", "sattvic"]
+    },
+    {
+      "id": "VG003",
+      "name": "Sweet Potato / Shakarkandi",
+      "nameHindi": "शकरकंदी",
+      "category": "vegetables",
+      "nutrition": {
+        "calories": 86,
+        "protein": 1.6,
+        "carbs": 20.1,
+        "fat": 0.1,
+        "fiber": 3.0,
+        "sugar": 4.2,
+        "calcium": 30,
+        "iron": 0.6,
+        "vitaminC": 2.4,
+        "potassium": 337
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
+      },
+      "serving": { "size": 130, "unit": "g", "description": "1 medium" },
+      "tags": ["root-vegetable", "vitamin-a", "comfort-food"]
+    },
+    {
+      "id": "VG004",
+      "name": "Bitter Gourd / Karela",
+      "nameHindi": "करेला",
+      "category": "vegetables",
+      "nutrition": {
+        "calories": 17,
+        "protein": 1.0,
+        "carbs": 3.7,
+        "fat": 0.2,
+        "fiber": 2.8,
+        "sugar": 1.0,
+        "calcium": 19,
+        "iron": 0.4,
+        "vitaminC": 84.0,
+        "potassium": 296
+      },
+      "ayurveda": {
+        "rasa": ["Bitter"],
+        "guna": ["Light", "Dry"],
+        "virya": "Cooling",
+        "vipaka": "Pungent",
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
+      },
+      "serving": { "size": 85, "unit": "g", "description": "½ cup sliced" },
+      "tags": ["blood-sugar", "detox", "medicinal"]
+    },
+    {
+      "id": "VG005",
+      "name": "Okra / Bhindi",
+      "nameHindi": "भिंडी",
+      "category": "vegetables",
+      "nutrition": {
+        "calories": 33,
+        "protein": 1.9,
+        "carbs": 7.5,
+        "fat": 0.2,
+        "fiber": 3.2,
+        "sugar": 1.5,
+        "calcium": 82,
+        "iron": 0.6,
+        "vitaminC": 23.0,
+        "potassium": 299
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Slimy"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "neutral" },
+        "bestFor": ["Vata", "Pitta"]
+      },
+      "serving": { "size": 80, "unit": "g", "description": "½ cup cooked" },
+      "tags": ["high-fiber", "folate-rich", "mucilaginous"]
+    },
+    {
+      "id": "VG006",
+      "name": "Ash Gourd / Petha",
+      "nameHindi": "पेठा",
+      "category": "vegetables",
+      "nutrition": {
+        "calories": 10,
+        "protein": 0.4,
+        "carbs": 2.3,
+        "fat": 0.1,
+        "fiber": 0.5,
+        "sugar": 1.2,
+        "calcium": 19,
+        "iron": 0.3,
+        "vitaminC": 13.0,
+        "potassium": 6
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Light", "Cool", "Smooth"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "neutral", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
+      },
+      "serving": { "size": 100, "unit": "g", "description": "½ cup diced" },
+      "tags": ["ultra-low-calorie", "sattvic", "brain-tonic"]
+    },
+    {
+      "id": "VG007",
+      "name": "Carrot / Gajar",
+      "nameHindi": "गाजर",
+      "category": "vegetables",
+      "nutrition": {
+        "calories": 41,
+        "protein": 0.9,
+        "carbs": 9.6,
+        "fat": 0.2,
+        "fiber": 2.8,
+        "sugar": 4.7,
+        "calcium": 33,
+        "iron": 0.3,
+        "vitaminC": 5.9,
+        "potassium": 320
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Bitter"],
+        "guna": ["Light", "Sharp"],
+        "virya": "Warming",
+        "vipaka": "Pungent",
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
+      },
+      "serving": { "size": 61, "unit": "g", "description": "1 medium" },
+      "tags": ["vitamin-a", "root-vegetable", "versatile"]
+    },
+    {
+      "id": "FR001",
+      "name": "Mango (ripe)",
+      "nameHindi": "आम",
+      "category": "fruits",
+      "nutrition": {
+        "calories": 60,
+        "protein": 0.8,
+        "carbs": 15.0,
+        "fat": 0.4,
+        "fiber": 1.6,
+        "sugar": 13.7,
+        "calcium": 11,
+        "iron": 0.2,
+        "vitaminC": 36.4,
+        "potassium": 168
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
+      },
+      "serving": { "size": 165, "unit": "g", "description": "1 cup sliced" },
+      "tags": ["seasonal-summer", "king-of-fruits", "vitamin-c"]
+    },
+    {
+      "id": "FR002",
+      "name": "Banana",
+      "nameHindi": "केला",
+      "category": "fruits",
+      "nutrition": {
+        "calories": 89,
+        "protein": 1.1,
+        "carbs": 22.8,
+        "fat": 0.3,
+        "fiber": 2.6,
+        "sugar": 12.2,
+        "calcium": 5,
+        "iron": 0.3,
+        "vitaminC": 8.7,
+        "potassium": 358
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Smooth"],
+        "virya": "Cooling",
+        "vipaka": "Sour",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
+      },
+      "serving": { "size": 118, "unit": "g", "description": "1 medium" },
+      "tags": ["energy-booster", "potassium-rich", "pre-workout"]
+    },
+    {
+      "id": "FR003",
+      "name": "Pomegranate / Anar",
+      "nameHindi": "अनार",
+      "category": "fruits",
+      "nutrition": {
+        "calories": 83,
+        "protein": 1.7,
+        "carbs": 18.7,
+        "fat": 1.2,
+        "fiber": 4.0,
+        "sugar": 13.7,
+        "calcium": 10,
+        "iron": 0.3,
+        "vitaminC": 10.2,
+        "potassium": 236
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent", "Sour"],
+        "guna": ["Light", "Oily"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Vata", "Pitta", "Kapha"]
+      },
+      "serving": { "size": 87, "unit": "g", "description": "½ cup seeds" },
+      "tags": ["tridoshic", "antioxidant", "blood-builder"]
+    },
+    {
+      "id": "FR004",
+      "name": "Papaya / Papita",
+      "nameHindi": "पपीता",
+      "category": "fruits",
+      "nutrition": {
+        "calories": 43,
+        "protein": 0.5,
+        "carbs": 10.8,
+        "fat": 0.3,
+        "fiber": 1.7,
+        "sugar": 7.8,
+        "calcium": 20,
+        "iron": 0.3,
+        "vitaminC": 60.9,
+        "potassium": 182
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Light", "Soft"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
+      },
+      "serving": { "size": 145, "unit": "g", "description": "1 cup cubed" },
+      "tags": ["digestive-aid", "enzyme-rich", "vitamin-c"]
+    },
+    {
+      "id": "FR005",
+      "name": "Indian Gooseberry / Amla",
+      "nameHindi": "आंवला",
+      "category": "fruits",
+      "nutrition": {
+        "calories": 44,
+        "protein": 0.9,
+        "carbs": 10.2,
+        "fat": 0.6,
+        "fiber": 4.3,
+        "sugar": 4.0,
+        "calcium": 25,
+        "iron": 0.3,
+        "vitaminC": 600.0,
+        "potassium": 198
+      },
+      "ayurveda": {
+        "rasa": ["Sour", "Sweet", "Pungent", "Bitter", "Astringent"],
+        "guna": ["Light", "Dry", "Cool"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Vata", "Pitta", "Kapha"]
+      },
+      "serving": { "size": 50, "unit": "g", "description": "2–3 berries" },
+      "tags": ["tridoshic", "rasayana", "immunity-booster", "superfood"]
+    },
+    {
+      "id": "FR006",
+      "name": "Apple / Seb",
+      "nameHindi": "सेब",
+      "category": "fruits",
+      "nutrition": {
+        "calories": 52,
+        "protein": 0.3,
+        "carbs": 13.8,
+        "fat": 0.2,
+        "fiber": 2.4,
+        "sugar": 10.4,
+        "calcium": 6,
+        "iron": 0.1,
+        "vitaminC": 4.6,
+        "potassium": 107
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "neutral" },
+        "bestFor": ["Pitta"]
+      },
+      "serving": { "size": 182, "unit": "g", "description": "1 medium" },
+      "tags": ["fiber-rich", "daily-fruit", "sattvic"]
+    },
+    {
+      "id": "FR007",
+      "name": "Coconut (fresh)",
+      "nameHindi": "नारियल",
+      "category": "fruits",
+      "nutrition": {
+        "calories": 354,
+        "protein": 3.3,
+        "carbs": 15.2,
+        "fat": 33.5,
+        "fiber": 9.0,
+        "sugar": 6.2,
+        "calcium": 14,
+        "iron": 2.4,
+        "vitaminC": 3.3,
+        "potassium": 356
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Smooth"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
+      },
+      "serving": { "size": 45, "unit": "g", "description": "¼ cup shredded" },
+      "tags": ["healthy-fat", "tropical", "sattvic"]
+    },
+    {
+      "id": "DA001",
+      "name": "Whole Milk (cow)",
+      "nameHindi": "गाय का दूध",
+      "category": "dairy",
+      "nutrition": {
+        "calories": 61,
+        "protein": 3.2,
+        "carbs": 4.8,
+        "fat": 3.3,
+        "fiber": 0,
+        "sugar": 5.1,
+        "calcium": 119,
+        "iron": 0.0,
+        "vitaminC": 0,
+        "potassium": 150
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Smooth", "Cool"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
+      },
+      "serving": { "size": 244, "unit": "ml", "description": "1 glass" },
+      "tags": ["calcium-rich", "sattvic", "ojas-building"]
+    },
+    {
+      "id": "DA002",
+      "name": "Curd / Dahi (plain)",
+      "nameHindi": "दही",
+      "category": "dairy",
+      "nutrition": {
+        "calories": 60,
+        "protein": 3.5,
+        "carbs": 4.7,
+        "fat": 3.3,
+        "fiber": 0,
+        "sugar": 4.7,
+        "calcium": 121,
+        "iron": 0.1,
+        "vitaminC": 0.5,
+        "potassium": 155
+      },
+      "ayurveda": {
+        "rasa": ["Sour", "Sweet"],
+        "guna": ["Heavy", "Oily", "Smooth"],
+        "virya": "Warming",
+        "vipaka": "Sour",
+        "doshaEffect": { "vata": "balances", "pitta": "increases", "kapha": "increases" },
+        "bestFor": ["Vata"]
+      },
+      "serving": { "size": 150, "unit": "g", "description": "1 bowl" },
+      "tags": ["probiotic", "digestive-aid", "calcium-rich"]
+    },
+    {
+      "id": "DA003",
+      "name": "Paneer (cottage cheese)",
+      "nameHindi": "पनीर",
+      "category": "dairy",
+      "nutrition": {
+        "calories": 265,
+        "protein": 18.3,
+        "carbs": 1.2,
+        "fat": 20.8,
+        "fiber": 0,
+        "sugar": 0.5,
+        "calcium": 476,
+        "iron": 0.2,
+        "vitaminC": 0,
+        "potassium": 100
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Sour"],
+        "guna": ["Heavy", "Oily", "Cool"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
+      },
+      "serving": { "size": 50, "unit": "g", "description": "4 cubes" },
+      "tags": ["high-protein", "vegetarian", "calcium-rich"]
+    },
+    {
+      "id": "DA004",
+      "name": "Buttermilk / Chaas",
+      "nameHindi": "छाछ",
+      "category": "dairy",
+      "nutrition": {
+        "calories": 40,
+        "protein": 3.3,
+        "carbs": 4.8,
+        "fat": 0.9,
+        "fiber": 0,
+        "sugar": 4.8,
+        "calcium": 116,
+        "iron": 0.0,
+        "vitaminC": 1.0,
+        "potassium": 151
+      },
+      "ayurveda": {
+        "rasa": ["Sour", "Astringent"],
+        "guna": ["Light", "Dry"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
+      },
+      "serving": { "size": 200, "unit": "ml", "description": "1 glass" },
+      "tags": ["probiotic", "digestive-aid", "cooling-drink"]
+    },
+    {
+      "id": "DA005",
+      "name": "Ghee (clarified butter)",
+      "nameHindi": "घी",
+      "category": "dairy",
+      "nutrition": {
+        "calories": 900,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 100,
+        "fiber": 0,
+        "sugar": 0,
+        "calcium": 0,
+        "iron": 0,
+        "vitaminC": 0,
+        "potassium": 0
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Smooth", "Cool"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
+      },
+      "serving": { "size": 5, "unit": "g", "description": "1 tsp" },
+      "tags": ["sattvic", "rasayana", "ojas-building", "medicinal"]
+    },
+    {
+      "id": "DA006",
+      "name": "Coconut Milk",
+      "nameHindi": "नारियल का दूध",
+      "category": "dairy",
+      "nutrition": {
+        "calories": 230,
+        "protein": 2.3,
+        "carbs": 5.5,
+        "fat": 23.8,
+        "fiber": 0,
+        "sugar": 3.3,
+        "calcium": 16,
+        "iron": 1.6,
+        "vitaminC": 2.8,
+        "potassium": 263
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Cool"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
+      },
+      "serving": { "size": 60, "unit": "ml", "description": "¼ cup" },
+      "tags": ["dairy-free", "vegan", "creamy"]
+    },
+    {
+      "id": "PR001",
+      "name": "Moong Dal (cooked)",
+      "nameHindi": "मूंग दाल",
+      "category": "proteins",
+      "nutrition": {
+        "calories": 106,
+        "protein": 7.0,
+        "carbs": 19.2,
+        "fat": 0.4,
+        "fiber": 7.6,
+        "sugar": 2.0,
+        "calcium": 27,
+        "iron": 1.4,
+        "vitaminC": 1.0,
+        "potassium": 266
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry", "Soft"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "neutral", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
+      },
+      "serving": { "size": 200, "unit": "g", "description": "1 bowl cooked" },
+      "tags": ["tridoshic", "sattvic", "easy-to-digest", "staple-dal"]
+    },
+    {
+      "id": "PR002",
+      "name": "Toor Dal / Arhar (cooked)",
+      "nameHindi": "तूर दाल",
+      "category": "proteins",
+      "nutrition": {
+        "calories": 116,
+        "protein": 7.7,
+        "carbs": 20.0,
+        "fat": 0.6,
+        "fiber": 6.6,
+        "sugar": 2.5,
+        "calcium": 42,
+        "iron": 1.8,
+        "vitaminC": 0,
+        "potassium": 367
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "neutral", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Kapha"]
+      },
+      "serving": { "size": 200, "unit": "g", "description": "1 bowl cooked" },
+      "tags": ["high-protein", "staple-dal", "fiber-rich"]
+    },
+    {
+      "id": "PR003",
+      "name": "Chickpeas / Chana (cooked)",
+      "nameHindi": "चना",
+      "category": "proteins",
+      "nutrition": {
+        "calories": 164,
+        "protein": 8.9,
+        "carbs": 27.4,
+        "fat": 2.6,
+        "fiber": 7.6,
+        "sugar": 4.8,
+        "calcium": 49,
+        "iron": 2.9,
+        "vitaminC": 1.3,
+        "potassium": 291
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Heavy", "Dry"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
+      },
+      "serving": { "size": 164, "unit": "g", "description": "1 cup cooked" },
+      "tags": ["high-protein", "high-fiber", "versatile"]
+    },
+    {
+      "id": "PR004",
+      "name": "Masoor Dal / Red Lentils (cooked)",
+      "nameHindi": "मसूर दाल",
+      "category": "proteins",
+      "nutrition": {
+        "calories": 116,
+        "protein": 9.0,
+        "carbs": 20.1,
+        "fat": 0.4,
+        "fiber": 7.9,
+        "sugar": 1.8,
+        "calcium": 19,
+        "iron": 3.3,
+        "vitaminC": 1.5,
+        "potassium": 369
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "neutral", "pitta": "increases", "kapha": "balances" },
+        "bestFor": ["Kapha"]
+      },
+      "serving": { "size": 200, "unit": "g", "description": "1 bowl cooked" },
+      "tags": ["quick-cook", "iron-rich", "high-protein"]
+    },
+    {
+      "id": "PR005",
+      "name": "Rajma / Kidney Beans (cooked)",
+      "nameHindi": "राजमा",
+      "category": "proteins",
+      "nutrition": {
+        "calories": 127,
+        "protein": 8.7,
+        "carbs": 22.8,
+        "fat": 0.5,
+        "fiber": 6.4,
+        "sugar": 0.3,
+        "calcium": 35,
+        "iron": 2.9,
+        "vitaminC": 1.2,
+        "potassium": 403
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Heavy", "Dry"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "increases", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Kapha"]
+      },
+      "serving": { "size": 177, "unit": "g", "description": "1 cup cooked" },
+      "tags": ["high-protein", "iron-rich", "heavy"]
+    },
+    {
+      "id": "PR006",
+      "name": "Tofu / Soy Paneer",
+      "nameHindi": "टोफू",
+      "category": "proteins",
+      "nutrition": {
+        "calories": 76,
+        "protein": 8.1,
+        "carbs": 1.9,
+        "fat": 4.8,
+        "fiber": 0.3,
+        "sugar": 0.6,
+        "calcium": 350,
+        "iron": 5.4,
+        "vitaminC": 0.1,
+        "potassium": 121
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Cool"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "neutral" },
+        "bestFor": ["Pitta"]
+      },
+      "serving": { "size": 126, "unit": "g", "description": "½ block" },
+      "tags": ["vegan", "high-protein", "calcium-rich"]
+    },
+    {
+      "id": "PR007",
+      "name": "Eggs (boiled)",
+      "nameHindi": "अंडा",
+      "category": "proteins",
+      "nutrition": {
+        "calories": 155,
+        "protein": 12.6,
+        "carbs": 1.1,
+        "fat": 10.6,
+        "fiber": 0,
+        "sugar": 1.1,
+        "calcium": 50,
+        "iron": 1.2,
+        "vitaminC": 0,
+        "potassium": 126
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Warm"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "increases", "kapha": "increases" },
+        "bestFor": ["Vata"]
+      },
+      "serving": { "size": 50, "unit": "g", "description": "1 large egg" },
+      "tags": ["complete-protein", "rajasic", "strength-building"]
+    },
+    {
+      "id": "SP001",
+      "name": "Turmeric / Haldi",
+      "nameHindi": "हल्दी",
+      "category": "spices",
+      "nutrition": {
+        "calories": 312,
+        "protein": 9.7,
+        "carbs": 67.1,
+        "fat": 3.3,
+        "fiber": 22.7,
+        "sugar": 3.2,
+        "calcium": 168,
+        "iron": 55.0,
+        "vitaminC": 0.7,
+        "potassium": 2080
+      },
+      "ayurveda": {
+        "rasa": ["Bitter", "Pungent", "Astringent"],
+        "guna": ["Light", "Dry"],
+        "virya": "Warming",
+        "vipaka": "Pungent",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Vata", "Pitta", "Kapha"]
+      },
+      "serving": { "size": 3, "unit": "g", "description": "1 tsp powder" },
+      "tags": ["tridoshic", "anti-inflammatory", "golden-spice", "medicinal"]
+    },
+    {
+      "id": "SP002",
+      "name": "Cumin / Jeera",
+      "nameHindi": "जीरा",
+      "category": "spices",
+      "nutrition": {
+        "calories": 375,
+        "protein": 17.8,
+        "carbs": 44.2,
+        "fat": 22.3,
+        "fiber": 10.5,
+        "sugar": 2.3,
+        "calcium": 931,
+        "iron": 66.4,
+        "vitaminC": 7.7,
+        "potassium": 1788
+      },
+      "ayurveda": {
+        "rasa": ["Pungent", "Bitter"],
+        "guna": ["Light", "Dry", "Sharp"],
+        "virya": "Warming",
+        "vipaka": "Pungent",
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
+      },
+      "serving": { "size": 2, "unit": "g", "description": "1 tsp seeds" },
+      "tags": ["digestive-aid", "carminative", "essential-spice"]
+    },
+    {
+      "id": "SP003",
+      "name": "Ginger / Adrak (fresh)",
+      "nameHindi": "अदरक",
+      "category": "spices",
+      "nutrition": {
+        "calories": 80,
+        "protein": 1.8,
+        "carbs": 17.8,
+        "fat": 0.8,
+        "fiber": 2.0,
+        "sugar": 1.7,
+        "calcium": 16,
+        "iron": 0.6,
+        "vitaminC": 5.0,
+        "potassium": 415
+      },
+      "ayurveda": {
+        "rasa": ["Pungent"],
+        "guna": ["Light", "Oily", "Sharp"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "increases", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
+      },
+      "serving": { "size": 5, "unit": "g", "description": "1 tsp grated" },
+      "tags": ["digestive-fire", "anti-nausea", "universal-medicine"]
+    },
+    {
+      "id": "SP004",
+      "name": "Coriander / Dhania (seeds)",
+      "nameHindi": "धनिया",
+      "category": "spices",
+      "nutrition": {
+        "calories": 298,
+        "protein": 12.4,
+        "carbs": 55.0,
+        "fat": 17.8,
+        "fiber": 41.9,
+        "sugar": 0,
+        "calcium": 709,
+        "iron": 16.3,
+        "vitaminC": 21.0,
+        "potassium": 1267
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent", "Bitter"],
+        "guna": ["Light", "Oily"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "neutral", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
+      },
+      "serving": { "size": 2, "unit": "g", "description": "1 tsp seeds" },
+      "tags": ["cooling-spice", "digestive-aid", "pitta-pacifying"]
+    },
+    {
+      "id": "SP005",
+      "name": "Fennel / Saunf",
+      "nameHindi": "सौंफ",
+      "category": "spices",
+      "nutrition": {
+        "calories": 345,
+        "protein": 15.8,
+        "carbs": 52.3,
+        "fat": 14.9,
+        "fiber": 39.8,
+        "sugar": 0,
+        "calcium": 1196,
+        "iron": 18.5,
+        "vitaminC": 21.0,
+        "potassium": 1694
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Pungent"],
+        "guna": ["Light", "Sharp"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Vata", "Pitta", "Kapha"]
+      },
+      "serving": { "size": 2, "unit": "g", "description": "1 tsp seeds" },
+      "tags": ["tridoshic", "after-meal", "digestive", "mouth-freshener"]
+    },
+    {
+      "id": "SP006",
+      "name": "Ashwagandha",
+      "nameHindi": "अश्वगंधा",
+      "category": "spices",
+      "nutrition": {
+        "calories": 245,
+        "protein": 3.9,
+        "carbs": 49.9,
+        "fat": 0.3,
+        "fiber": 32.3,
+        "sugar": 1.2,
+        "calcium": 23,
+        "iron": 3.3,
+        "vitaminC": 3.7,
+        "potassium": 500
+      },
+      "ayurveda": {
+        "rasa": ["Bitter", "Astringent", "Sweet"],
+        "guna": ["Light", "Oily"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
+      },
+      "serving": { "size": 3, "unit": "g", "description": "½ tsp powder" },
+      "tags": ["adaptogen", "rasayana", "stress-relief", "strength"]
+    },
+    {
+      "id": "SP007",
+      "name": "Black Pepper / Kali Mirch",
+      "nameHindi": "काली मिर्च",
+      "category": "spices",
+      "nutrition": {
+        "calories": 251,
+        "protein": 10.4,
+        "carbs": 63.9,
+        "fat": 3.3,
+        "fiber": 25.3,
+        "sugar": 0.6,
+        "calcium": 443,
+        "iron": 9.7,
+        "vitaminC": 0,
+        "potassium": 1329
+      },
+      "ayurveda": {
+        "rasa": ["Pungent"],
+        "guna": ["Light", "Dry", "Sharp"],
+        "virya": "Warming",
+        "vipaka": "Pungent",
+        "doshaEffect": { "vata": "balances", "pitta": "increases", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
+      },
+      "serving": { "size": 1, "unit": "g", "description": "¼ tsp ground" },
+      "tags": ["bioavailability", "kapha-pacifying", "warming"]
+    },
+    {
+      "id": "OL001",
+      "name": "Sesame Oil / Til ka Tel",
+      "nameHindi": "तिल का तेल",
+      "category": "oils_sweeteners",
+      "nutrition": {
+        "calories": 884,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 100,
+        "fiber": 0,
+        "sugar": 0,
+        "calcium": 0,
+        "iron": 0,
+        "vitaminC": 0,
+        "potassium": 0
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Bitter", "Astringent"],
+        "guna": ["Heavy", "Oily", "Warm", "Sharp"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "increases", "kapha": "increases" },
+        "bestFor": ["Vata"]
+      },
+      "serving": { "size": 5, "unit": "ml", "description": "1 tsp" },
+      "tags": ["warming-oil", "abhyanga", "vata-pacifying"]
+    },
+    {
+      "id": "OL002",
+      "name": "Coconut Oil",
+      "nameHindi": "नारियल तेल",
+      "category": "oils_sweeteners",
+      "nutrition": {
+        "calories": 862,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 100,
+        "fiber": 0,
+        "sugar": 0,
+        "calcium": 0,
+        "iron": 0.0,
+        "vitaminC": 0,
+        "potassium": 0
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Cool", "Smooth"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
+      },
+      "serving": { "size": 5, "unit": "ml", "description": "1 tsp" },
+      "tags": ["cooling-oil", "pitta-pacifying", "hair-skin"]
+    },
+    {
+      "id": "OL003",
+      "name": "Mustard Oil / Sarson ka Tel",
+      "nameHindi": "सरसों का तेल",
+      "category": "oils_sweeteners",
+      "nutrition": {
+        "calories": 884,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 100,
+        "fiber": 0,
+        "sugar": 0,
+        "calcium": 0,
+        "iron": 0,
+        "vitaminC": 0,
+        "potassium": 0
+      },
+      "ayurveda": {
+        "rasa": ["Pungent", "Bitter"],
+        "guna": ["Light", "Sharp", "Warm"],
+        "virya": "Warming",
+        "vipaka": "Pungent",
+        "doshaEffect": { "vata": "balances", "pitta": "increases", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
+      },
+      "serving": { "size": 5, "unit": "ml", "description": "1 tsp" },
+      "tags": ["warming-oil", "kapha-pacifying", "north-indian"]
+    },
+    {
+      "id": "OL004",
+      "name": "Honey / Shahad",
+      "nameHindi": "शहद",
+      "category": "oils_sweeteners",
+      "nutrition": {
+        "calories": 304,
+        "protein": 0.3,
+        "carbs": 82.4,
+        "fat": 0,
+        "fiber": 0.2,
+        "sugar": 82.1,
+        "calcium": 6,
+        "iron": 0.4,
+        "vitaminC": 0.5,
+        "potassium": 52
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry", "Sharp"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "neutral", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Kapha"]
+      },
+      "serving": { "size": 21, "unit": "g", "description": "1 tbsp" },
+      "tags": ["natural-sweetener", "medicinal", "never-heat"]
+    },
+    {
+      "id": "OL005",
+      "name": "Jaggery / Gur",
+      "nameHindi": "गुड़",
+      "category": "oils_sweeteners",
+      "nutrition": {
+        "calories": 383,
+        "protein": 0.4,
+        "carbs": 95.0,
+        "fat": 0.1,
+        "fiber": 0,
+        "sugar": 84.0,
+        "calcium": 80,
+        "iron": 11.0,
+        "vitaminC": 0,
+        "potassium": 460
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
+      },
+      "serving": { "size": 10, "unit": "g", "description": "1 small piece" },
+      "tags": ["iron-rich", "unrefined", "winter-sweetener"]
+    },
+    {
+      "id": "OL006",
+      "name": "Flaxseed / Alsi",
+      "nameHindi": "अलसी",
+      "category": "oils_sweeteners",
+      "nutrition": {
+        "calories": 534,
+        "protein": 18.3,
+        "carbs": 28.9,
+        "fat": 42.2,
+        "fiber": 27.3,
+        "sugar": 1.6,
+        "calcium": 255,
+        "iron": 5.7,
+        "vitaminC": 0.6,
+        "potassium": 813
+      },
+      "ayurveda": {
+        "rasa": ["Sweet", "Bitter"],
+        "guna": ["Heavy", "Oily", "Smooth"],
+        "virya": "Warming",
+        "vipaka": "Pungent",
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
+      },
+      "serving": { "size": 10, "unit": "g", "description": "1 tbsp ground" },
+      "tags": ["omega-3", "fiber-rich", "seed", "heart-healthy"]
+    },
+    {
+      "id": "OL007",
+      "name": "Almonds / Badam",
+      "nameHindi": "बादाम",
+      "category": "oils_sweeteners",
+      "nutrition": {
+        "calories": 579,
+        "protein": 21.2,
+        "carbs": 21.6,
+        "fat": 49.9,
+        "fiber": 12.5,
+        "sugar": 4.4,
+        "calcium": 269,
+        "iron": 3.7,
+        "vitaminC": 0,
+        "potassium": 733
+      },
+      "ayurveda": {
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Warm"],
+        "virya": "Warming",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
+      },
+      "serving": { "size": 28, "unit": "g", "description": "~23 almonds" },
+      "tags": ["brain-tonic", "ojas-building", "sattvic", "soaked-best"]
+    }
+  ]
+}
