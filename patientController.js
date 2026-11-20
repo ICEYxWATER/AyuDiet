@@ -1,5 +1,5 @@
-import Patient from '../models/Patient.js';
-import DietPlan from '../models/DietPlan.js';
+import Patient from './Patient.js';
+import DietPlan from './DietPlan.js';
 
 /**
  * @desc   Get all patients

@@ -1,4 +1,4 @@
-import Food from '../models/Food.js';
+import Food from './Food.js';
 
 /**
  * @desc   Get all foods with optional filters (category, dosha, search, virya, rasa)

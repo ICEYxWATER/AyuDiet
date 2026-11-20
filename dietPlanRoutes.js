@@ -3,7 +3,7 @@ import {
   getPlanByPatient,
   saveOrUpdatePlan,
   approvePlan
-} from '../controllers/dietPlanController.js';
+} from './dietPlanController.js';
 
 const router = express.Router();
 

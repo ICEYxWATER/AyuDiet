@@ -1,6 +1,6 @@
-import DietPlan from '../models/DietPlan.js';
-import Patient from '../models/Patient.js';
-import Food from '../models/Food.js';
+import DietPlan from './DietPlan.js';
+import Patient from './Patient.js';
+import Food from './Food.js';
 
 /**
  * Helper: Scale per-100g nutrient to portion in grams

@@ -5,7 +5,7 @@ import {
   getCategories,
   getDoshaRecommendations,
   createFood
-} from '../controllers/foodController.js';
+} from './foodController.js';
 
 const router = express.Router();
 
