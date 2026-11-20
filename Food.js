@@ -1,51 +1,108 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
 const foodSchema = new mongoose.Schema(
   {
-    foodId: { type: String, required: true, unique: true }, // e.g. "GR001"
-    name: { type: String, required: true, index: true },
-    nameHindi: String,
-    category: {
+    code: {
       type: String,
       required: true,
-      enum: ["grains", "vegetables", "fruits", "dairy", "proteins", "spices", "oils_sweeteners"],
-      index: true,
+      unique: true,
+      trim: true,
+      index: true
+    },
+    name: {
+      type: String,
+      required: [true, 'Food name is required'],
+      trim: true,
+      index: true
+    },
+    nameHindi: {
+      type: String,
+      trim: true
+    },
+    category: {
+      type: String,
+      required: [true, 'Category is required'],
+      enum: [
+        'grains',
+        'vegetables',
+        'fruits',
+        'dairy',
+        'proteins',
+        'spices',
+        'oils_sweeteners'
+      ],
+      index: true
+    },
+    categoryName: {
+      type: String,
+      default: ''
     },
     nutrition: {
-      calories: { type: Number, default: 0 },
-      protein: { type: Number, default: 0 },
-      carbs: { type: Number, default: 0 },
-      fat: { type: Number, default: 0 },
+      calories: { type: Number, required: true }, // kcal per 100g
+      protein: { type: Number, required: true, default: 0 }, // grams
+      carbs: { type: Number, required: true, default: 0 }, // grams
+      fat: { type: Number, required: true, default: 0 }, // grams
       fiber: { type: Number, default: 0 },
       sugar: { type: Number, default: 0 },
-      calcium: { type: Number, default: 0 },
-      iron: { type: Number, default: 0 },
-      vitaminC: { type: Number, default: 0 },
-      potassium: { type: Number, default: 0 },
+      calcium: { type: Number, default: 0 }, // mg
+      iron: { type: Number, default: 0 }, // mg
+      vitaminC: { type: Number, default: 0 }, // mg
+      potassium: { type: Number, default: 0 } // mg
     },
     ayurveda: {
-      rasa: [String],       // Taste (Sweet, Sour, Salty, Pungent, Bitter, Astringent)
-      guna: [String],       // Qualities (Light, Heavy, Oily, Dry, etc.)
-      virya: String,        // Thermal potency (Warming / Cooling)
-      vipaka: String,       // Post-digestive effect
-      doshaEffect: {
-        vata: { type: String, enum: ["balances", "increases", "neutral"] },
-        pitta: { type: String, enum: ["balances", "increases", "neutral"] },
-        kapha: { type: String, enum: ["balances", "increases", "neutral"] },
+      rasa: [{ type: String, trim: true }], // e.g. ["Sweet", "Astringent"]
+      guna: [{ type: String, trim: true }], // e.g. ["Light", "Soft"]
+      virya: {
+        type: String,
+        enum: ['Cooling', 'Warming', 'Neutral', ''],
+        default: 'Neutral'
       },
-      bestFor: [{ type: String, enum: ["Vata", "Pitta", "Kapha"] }],
+      vipaka: {
+        type: String,
+        enum: ['Sweet', 'Sour', 'Pungent', ''],
+        default: 'Sweet'
+      },
+      doshaEffect: {
+        vata: {
+          type: String,
+          enum: ['balances', 'increases', 'neutral'],
+          default: 'neutral'
+        },
+        pitta: {
+          type: String,
+          enum: ['balances', 'increases', 'neutral'],
+          default: 'neutral'
+        },
+        kapha: {
+          type: String,
+          enum: ['balances', 'increases', 'neutral'],
+          default: 'neutral'
+        }
+      },
+      bestFor: [{ type: String }] // e.g. ["Vata", "Pitta"]
+    },
+    plateColor: {
+      type: String,
+      default: '#9da96b' // Hex color for 3D meal bowl visualization
     },
     serving: {
-      size: Number,
-      unit: String,
-      description: String,
+      size: { type: Number, default: 100 },
+      unit: { type: String, default: 'g' },
+      description: { type: String, default: '100g portion' }
     },
-    tags: [String],
+    tags: [{ type: String, trim: true }]
   },
-  { timestamps: true }
+  {
+    timestamps: true
+  }
 );
 
-// Text index for search
-foodSchema.index({ name: "text", nameHindi: "text", tags: "text" });
+// Full-text search index on name, Hindi name, and tags
+foodSchema.index({
+  name: 'text',
+  nameHindi: 'text',
+  tags: 'text'
+});
 
-module.exports = mongoose.model("Food", foodSchema);
+const Food = mongoose.model('Food', foodSchema);
+export default Food;
