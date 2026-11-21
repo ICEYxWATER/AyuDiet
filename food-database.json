@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "totalFoods": 48,
+    "totalFoods": 49,
     "categories": 7,
     "sources": [
       "IFCT 2017 – Indian Food Composition Tables (NIN, Hyderabad)",
@@ -9,14 +9,8 @@
       "Kaggle – Ayurvedic Indian Food Properties Dataset",
       "USDA FoodData Central (cross-referenced)"
     ],
-    "servingUnit": "nutrition values per 100 g; serving fields describe suggested portions",
-    "lastUpdated": "2026-11-20",
-    "dataNotes": [
-      "Food IDs are unique and stable; food counts are derived from the foods array.",
-      "Nutrition values are demonstration estimates and are not traced to a source per food record. Review against a primary food composition source before clinical or production use.",
-      "Ayurvedic properties are qualitative sample labels and require practitioner review before being used for personalized recommendations.",
-      "Serving amounts in ml are volume measures; applications that calculate nutrients from per-100-g values should convert volume to mass before scaling."
-    ]
+    "servingUnit": "per 100 g unless noted",
+    "lastUpdated": "2026-11-20"
   },
   "categories": [
     {
@@ -81,36 +75,15 @@
         "potassium": 35
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Light",
-          "Soft",
-          "Smooth"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Light", "Soft", "Smooth"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
       },
-      "serving": {
-        "size": 150,
-        "unit": "g",
-        "description": "1 cup cooked"
-      },
-      "tags": [
-        "gluten-free",
-        "sattvic",
-        "easy-to-digest"
-      ]
+      "serving": { "size": 150, "unit": "g", "description": "1 cup cooked" },
+      "tags": ["gluten-free", "sattvic", "easy-to-digest"]
     },
     {
       "id": "GR002",
@@ -130,34 +103,15 @@
         "potassium": 284
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Nourishing"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Nourishing"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "neutral",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
       },
-      "serving": {
-        "size": 40,
-        "unit": "g",
-        "description": "1 medium roti"
-      },
-      "tags": [
-        "high-fiber",
-        "sattvic",
-        "staple"
-      ]
+      "serving": { "size": 40, "unit": "g", "description": "1 medium roti" },
+      "tags": ["high-fiber", "sattvic", "staple"]
     },
     {
       "id": "GR003",
@@ -177,34 +131,15 @@
         "potassium": 61
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Warm"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Warm"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "neutral",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
       },
-      "serving": {
-        "size": 160,
-        "unit": "g",
-        "description": "1 bowl cooked"
-      },
-      "tags": [
-        "high-fiber",
-        "heart-healthy",
-        "breakfast"
-      ]
+      "serving": { "size": 160, "unit": "g", "description": "1 bowl cooked" },
+      "tags": ["high-fiber", "heart-healthy", "breakfast"]
     },
     {
       "id": "GR004",
@@ -224,36 +159,15 @@
         "potassium": 408
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Dry"
-        ],
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "increases",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 30,
-        "unit": "g",
-        "description": "2 tbsp flour"
-      },
-      "tags": [
-        "gluten-free",
-        "calcium-rich",
-        "millet"
-      ]
+      "serving": { "size": 30, "unit": "g", "description": "2 tbsp flour" },
+      "tags": ["gluten-free", "calcium-rich", "millet"]
     },
     {
       "id": "GR005",
@@ -273,36 +187,15 @@
         "potassium": 172
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Dry"
-        ],
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "neutral",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "neutral", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 185,
-        "unit": "g",
-        "description": "1 cup cooked"
-      },
-      "tags": [
-        "complete-protein",
-        "gluten-free",
-        "superfood"
-      ]
+      "serving": { "size": 185, "unit": "g", "description": "1 cup cooked" },
+      "tags": ["complete-protein", "gluten-free", "superfood"]
     },
     {
       "id": "GR006",
@@ -322,35 +215,15 @@
         "potassium": 113
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Light",
-          "Soft"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Light", "Soft"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "neutral"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "neutral" },
+        "bestFor": ["Vata", "Pitta"]
       },
-      "serving": {
-        "size": 30,
-        "unit": "g",
-        "description": "1 cup (dry)"
-      },
-      "tags": [
-        "iron-rich",
-        "quick-cook",
-        "breakfast"
-      ]
+      "serving": { "size": 30, "unit": "g", "description": "1 cup (dry)" },
+      "tags": ["iron-rich", "quick-cook", "breakfast"]
     },
     {
       "id": "GR007",
@@ -370,36 +243,15 @@
         "potassium": 340
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Dry"
-        ],
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "increases",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 30,
-        "unit": "g",
-        "description": "2 tbsp flour"
-      },
-      "tags": [
-        "gluten-free",
-        "millet",
-        "high-fiber"
-      ]
+      "serving": { "size": 30, "unit": "g", "description": "2 tbsp flour" },
+      "tags": ["gluten-free", "millet", "high-fiber"]
     },
     {
       "id": "VG001",
@@ -419,37 +271,15 @@
         "potassium": 558
       },
       "ayurveda": {
-        "rasa": [
-          "Astringent",
-          "Sweet"
-        ],
-        "guna": [
-          "Light",
-          "Dry",
-          "Rough"
-        ],
+        "rasa": ["Astringent", "Sweet"],
+        "guna": ["Light", "Dry", "Rough"],
         "virya": "Cooling",
         "vipaka": "Pungent",
-        "doshaEffect": {
-          "vata": "increases",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 30,
-        "unit": "g",
-        "description": "1 cup raw"
-      },
-      "tags": [
-        "iron-rich",
-        "leafy-green",
-        "low-calorie"
-      ]
+      "serving": { "size": 30, "unit": "g", "description": "1 cup raw" },
+      "tags": ["iron-rich", "leafy-green", "low-calorie"]
     },
     {
       "id": "VG002",
@@ -469,36 +299,15 @@
         "potassium": 150
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Light",
-          "Smooth",
-          "Cool"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Light", "Smooth", "Cool"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "neutral",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "neutral", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 100,
-        "unit": "g",
-        "description": "½ cup diced"
-      },
-      "tags": [
-        "hydrating",
-        "low-calorie",
-        "sattvic"
-      ]
+      "serving": { "size": 100, "unit": "g", "description": "½ cup diced" },
+      "tags": ["hydrating", "low-calorie", "sattvic"]
     },
     {
       "id": "VG003",
@@ -518,35 +327,15 @@
         "potassium": 337
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
       },
-      "serving": {
-        "size": 130,
-        "unit": "g",
-        "description": "1 medium"
-      },
-      "tags": [
-        "root-vegetable",
-        "vitamin-a",
-        "comfort-food"
-      ]
+      "serving": { "size": 130, "unit": "g", "description": "1 medium" },
+      "tags": ["root-vegetable", "vitamin-a", "comfort-food"]
     },
     {
       "id": "VG004",
@@ -566,35 +355,15 @@
         "potassium": 296
       },
       "ayurveda": {
-        "rasa": [
-          "Bitter"
-        ],
-        "guna": [
-          "Light",
-          "Dry"
-        ],
+        "rasa": ["Bitter"],
+        "guna": ["Light", "Dry"],
         "virya": "Cooling",
         "vipaka": "Pungent",
-        "doshaEffect": {
-          "vata": "increases",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 85,
-        "unit": "g",
-        "description": "½ cup sliced"
-      },
-      "tags": [
-        "blood-sugar",
-        "detox",
-        "medicinal"
-      ]
+      "serving": { "size": 85, "unit": "g", "description": "½ cup sliced" },
+      "tags": ["blood-sugar", "detox", "medicinal"]
     },
     {
       "id": "VG005",
@@ -614,36 +383,15 @@
         "potassium": 299
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Slimy"
-        ],
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Slimy"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "neutral"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "neutral" },
+        "bestFor": ["Vata", "Pitta"]
       },
-      "serving": {
-        "size": 80,
-        "unit": "g",
-        "description": "½ cup cooked"
-      },
-      "tags": [
-        "high-fiber",
-        "folate-rich",
-        "mucilaginous"
-      ]
+      "serving": { "size": 80, "unit": "g", "description": "½ cup cooked" },
+      "tags": ["high-fiber", "folate-rich", "mucilaginous"]
     },
     {
       "id": "VG006",
@@ -663,36 +411,15 @@
         "potassium": 6
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Light",
-          "Cool",
-          "Smooth"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Light", "Cool", "Smooth"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "neutral",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "neutral", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 100,
-        "unit": "g",
-        "description": "½ cup diced"
-      },
-      "tags": [
-        "ultra-low-calorie",
-        "sattvic",
-        "brain-tonic"
-      ]
+      "serving": { "size": 100, "unit": "g", "description": "½ cup diced" },
+      "tags": ["ultra-low-calorie", "sattvic", "brain-tonic"]
     },
     {
       "id": "VG007",
@@ -712,36 +439,15 @@
         "potassium": 320
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Bitter"
-        ],
-        "guna": [
-          "Light",
-          "Sharp"
-        ],
+        "rasa": ["Sweet", "Bitter"],
+        "guna": ["Light", "Sharp"],
         "virya": "Warming",
         "vipaka": "Pungent",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "neutral",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Vata",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
       },
-      "serving": {
-        "size": 61,
-        "unit": "g",
-        "description": "1 medium"
-      },
-      "tags": [
-        "vitamin-a",
-        "root-vegetable",
-        "versatile"
-      ]
+      "serving": { "size": 61, "unit": "g", "description": "1 medium" },
+      "tags": ["vitamin-a", "root-vegetable", "versatile"]
     },
     {
       "id": "FR001",
@@ -761,34 +467,15 @@
         "potassium": 168
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "neutral",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
       },
-      "serving": {
-        "size": 165,
-        "unit": "g",
-        "description": "1 cup sliced"
-      },
-      "tags": [
-        "seasonal-summer",
-        "king-of-fruits",
-        "vitamin-c"
-      ]
+      "serving": { "size": 165, "unit": "g", "description": "1 cup sliced" },
+      "tags": ["seasonal-summer", "king-of-fruits", "vitamin-c"]
     },
     {
       "id": "FR002",
@@ -808,35 +495,15 @@
         "potassium": 358
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Smooth"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Smooth"],
         "virya": "Cooling",
         "vipaka": "Sour",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
       },
-      "serving": {
-        "size": 118,
-        "unit": "g",
-        "description": "1 medium"
-      },
-      "tags": [
-        "energy-booster",
-        "potassium-rich",
-        "pre-workout"
-      ]
+      "serving": { "size": 118, "unit": "g", "description": "1 medium" },
+      "tags": ["energy-booster", "potassium-rich", "pre-workout"]
     },
     {
       "id": "FR003",
@@ -856,38 +523,15 @@
         "potassium": 236
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent",
-          "Sour"
-        ],
-        "guna": [
-          "Light",
-          "Oily"
-        ],
+        "rasa": ["Sweet", "Astringent", "Sour"],
+        "guna": ["Light", "Oily"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Vata", "Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 87,
-        "unit": "g",
-        "description": "½ cup seeds"
-      },
-      "tags": [
-        "tridoshic",
-        "antioxidant",
-        "blood-builder"
-      ]
+      "serving": { "size": 87, "unit": "g", "description": "½ cup seeds" },
+      "tags": ["tridoshic", "antioxidant", "blood-builder"]
     },
     {
       "id": "FR004",
@@ -907,35 +551,15 @@
         "potassium": 182
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Light",
-          "Soft"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Light", "Soft"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "neutral",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Vata",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
       },
-      "serving": {
-        "size": 145,
-        "unit": "g",
-        "description": "1 cup cubed"
-      },
-      "tags": [
-        "digestive-aid",
-        "enzyme-rich",
-        "vitamin-c"
-      ]
+      "serving": { "size": 145, "unit": "g", "description": "1 cup cubed" },
+      "tags": ["digestive-aid", "enzyme-rich", "vitamin-c"]
     },
     {
       "id": "FR005",
@@ -955,42 +579,15 @@
         "potassium": 198
       },
       "ayurveda": {
-        "rasa": [
-          "Sour",
-          "Sweet",
-          "Pungent",
-          "Bitter",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Dry",
-          "Cool"
-        ],
+        "rasa": ["Sour", "Sweet", "Pungent", "Bitter", "Astringent"],
+        "guna": ["Light", "Dry", "Cool"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Vata", "Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 50,
-        "unit": "g",
-        "description": "2–3 berries"
-      },
-      "tags": [
-        "tridoshic",
-        "rasayana",
-        "immunity-booster",
-        "superfood"
-      ]
+      "serving": { "size": 50, "unit": "g", "description": "2–3 berries" },
+      "tags": ["tridoshic", "rasayana", "immunity-booster", "superfood"]
     },
     {
       "id": "FR006",
@@ -1010,35 +607,15 @@
         "potassium": 107
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Dry"
-        ],
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "increases",
-          "pitta": "balances",
-          "kapha": "neutral"
-        },
-        "bestFor": [
-          "Pitta"
-        ]
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "neutral" },
+        "bestFor": ["Pitta"]
       },
-      "serving": {
-        "size": 182,
-        "unit": "g",
-        "description": "1 medium"
-      },
-      "tags": [
-        "fiber-rich",
-        "daily-fruit",
-        "sattvic"
-      ]
+      "serving": { "size": 182, "unit": "g", "description": "1 medium" },
+      "tags": ["fiber-rich", "daily-fruit", "sattvic"]
     },
     {
       "id": "FR007",
@@ -1058,36 +635,15 @@
         "potassium": 356
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily",
-          "Smooth"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Smooth"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
       },
-      "serving": {
-        "size": 45,
-        "unit": "g",
-        "description": "¼ cup shredded"
-      },
-      "tags": [
-        "healthy-fat",
-        "tropical",
-        "sattvic"
-      ]
+      "serving": { "size": 45, "unit": "g", "description": "¼ cup shredded" },
+      "tags": ["healthy-fat", "tropical", "sattvic"]
     },
     {
       "id": "DA001",
@@ -1107,37 +663,15 @@
         "potassium": 150
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily",
-          "Smooth",
-          "Cool"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Smooth", "Cool"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
       },
-      "serving": {
-        "size": 244,
-        "unit": "ml",
-        "description": "1 glass"
-      },
-      "tags": [
-        "calcium-rich",
-        "sattvic",
-        "ojas-building"
-      ]
+      "serving": { "size": 244, "unit": "ml", "description": "1 glass" },
+      "tags": ["calcium-rich", "sattvic", "ojas-building"]
     },
     {
       "id": "DA002",
@@ -1157,36 +691,15 @@
         "potassium": 155
       },
       "ayurveda": {
-        "rasa": [
-          "Sour",
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily",
-          "Smooth"
-        ],
+        "rasa": ["Sour", "Sweet"],
+        "guna": ["Heavy", "Oily", "Smooth"],
         "virya": "Warming",
         "vipaka": "Sour",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "increases",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "increases", "kapha": "increases" },
+        "bestFor": ["Vata"]
       },
-      "serving": {
-        "size": 150,
-        "unit": "g",
-        "description": "1 bowl"
-      },
-      "tags": [
-        "probiotic",
-        "digestive-aid",
-        "calcium-rich"
-      ]
+      "serving": { "size": 150, "unit": "g", "description": "1 bowl" },
+      "tags": ["probiotic", "digestive-aid", "calcium-rich"]
     },
     {
       "id": "DA003",
@@ -1206,36 +719,15 @@
         "potassium": 100
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Sour"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily",
-          "Cool"
-        ],
+        "rasa": ["Sweet", "Sour"],
+        "guna": ["Heavy", "Oily", "Cool"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "neutral",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
       },
-      "serving": {
-        "size": 50,
-        "unit": "g",
-        "description": "4 cubes"
-      },
-      "tags": [
-        "high-protein",
-        "vegetarian",
-        "calcium-rich"
-      ]
+      "serving": { "size": 50, "unit": "g", "description": "4 cubes" },
+      "tags": ["high-protein", "vegetarian", "calcium-rich"]
     },
     {
       "id": "DA004",
@@ -1255,36 +747,15 @@
         "potassium": 151
       },
       "ayurveda": {
-        "rasa": [
-          "Sour",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Dry"
-        ],
+        "rasa": ["Sour", "Astringent"],
+        "guna": ["Light", "Dry"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "neutral",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Vata",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
       },
-      "serving": {
-        "size": 200,
-        "unit": "ml",
-        "description": "1 glass"
-      },
-      "tags": [
-        "probiotic",
-        "digestive-aid",
-        "cooling-drink"
-      ]
+      "serving": { "size": 200, "unit": "ml", "description": "1 glass" },
+      "tags": ["probiotic", "digestive-aid", "cooling-drink"]
     },
     {
       "id": "DA005",
@@ -1304,38 +775,15 @@
         "potassium": 0
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily",
-          "Smooth",
-          "Cool"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Smooth", "Cool"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
       },
-      "serving": {
-        "size": 5,
-        "unit": "g",
-        "description": "1 tsp"
-      },
-      "tags": [
-        "sattvic",
-        "rasayana",
-        "ojas-building",
-        "medicinal"
-      ]
+      "serving": { "size": 5, "unit": "g", "description": "1 tsp" },
+      "tags": ["sattvic", "rasayana", "ojas-building", "medicinal"]
     },
     {
       "id": "DA006",
@@ -1355,36 +803,43 @@
         "potassium": 263
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily",
-          "Cool"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Cool"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
       },
-      "serving": {
-        "size": 60,
-        "unit": "ml",
-        "description": "¼ cup"
+      "serving": { "size": 60, "unit": "ml", "description": "¼ cup" },
+      "tags": ["dairy-free", "vegan", "creamy"]
+    },
+    {
+      "id": "DA007",
+      "name": "Lassi (sweet yogurt drink)",
+      "nameHindi": "लस्सी",
+      "category": "dairy",
+      "nutrition": {
+        "calories": 72,
+        "protein": 2.8,
+        "carbs": 11.5,
+        "fat": 1.8,
+        "fiber": 0,
+        "sugar": 10.2,
+        "calcium": 100,
+        "iron": 0.1,
+        "vitaminC": 1.0,
+        "potassium": 130
       },
-      "tags": [
-        "dairy-free",
-        "vegan",
-        "creamy"
-      ]
+      "ayurveda": {
+        "rasa": ["Sweet", "Sour"],
+        "guna": ["Heavy", "Smooth", "Cool"],
+        "virya": "Cooling",
+        "vipaka": "Sweet",
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
+      },
+      "serving": { "size": 200, "unit": "ml", "description": "1 glass" },
+      "tags": ["probiotic", "post-meal", "cooling-drink", "digestive"]
     },
     {
       "id": "PR001",
@@ -1404,38 +859,15 @@
         "potassium": 266
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Dry",
-          "Soft"
-        ],
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry", "Soft"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "neutral",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "neutral", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 200,
-        "unit": "g",
-        "description": "1 bowl cooked"
-      },
-      "tags": [
-        "tridoshic",
-        "sattvic",
-        "easy-to-digest",
-        "staple-dal"
-      ]
+      "serving": { "size": 200, "unit": "g", "description": "1 bowl cooked" },
+      "tags": ["tridoshic", "sattvic", "easy-to-digest", "staple-dal"]
     },
     {
       "id": "PR002",
@@ -1455,35 +887,15 @@
         "potassium": 367
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Dry"
-        ],
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "neutral",
-          "pitta": "neutral",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "neutral", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Kapha"]
       },
-      "serving": {
-        "size": 200,
-        "unit": "g",
-        "description": "1 bowl cooked"
-      },
-      "tags": [
-        "high-protein",
-        "staple-dal",
-        "fiber-rich"
-      ]
+      "serving": { "size": 200, "unit": "g", "description": "1 bowl cooked" },
+      "tags": ["high-protein", "staple-dal", "fiber-rich"]
     },
     {
       "id": "PR003",
@@ -1503,36 +915,15 @@
         "potassium": 291
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent"
-        ],
-        "guna": [
-          "Heavy",
-          "Dry"
-        ],
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Heavy", "Dry"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "increases",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 164,
-        "unit": "g",
-        "description": "1 cup cooked"
-      },
-      "tags": [
-        "high-protein",
-        "high-fiber",
-        "versatile"
-      ]
+      "serving": { "size": 164, "unit": "g", "description": "1 cup cooked" },
+      "tags": ["high-protein", "high-fiber", "versatile"]
     },
     {
       "id": "PR004",
@@ -1552,35 +943,15 @@
         "potassium": 369
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Dry"
-        ],
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "neutral",
-          "pitta": "increases",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "neutral", "pitta": "increases", "kapha": "balances" },
+        "bestFor": ["Kapha"]
       },
-      "serving": {
-        "size": 200,
-        "unit": "g",
-        "description": "1 bowl cooked"
-      },
-      "tags": [
-        "quick-cook",
-        "iron-rich",
-        "high-protein"
-      ]
+      "serving": { "size": 200, "unit": "g", "description": "1 bowl cooked" },
+      "tags": ["quick-cook", "iron-rich", "high-protein"]
     },
     {
       "id": "PR005",
@@ -1600,35 +971,15 @@
         "potassium": 403
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent"
-        ],
-        "guna": [
-          "Heavy",
-          "Dry"
-        ],
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Heavy", "Dry"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "increases",
-          "pitta": "neutral",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "increases", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Kapha"]
       },
-      "serving": {
-        "size": 177,
-        "unit": "g",
-        "description": "1 cup cooked"
-      },
-      "tags": [
-        "high-protein",
-        "iron-rich",
-        "heavy"
-      ]
+      "serving": { "size": 177, "unit": "g", "description": "1 cup cooked" },
+      "tags": ["high-protein", "iron-rich", "heavy"]
     },
     {
       "id": "PR006",
@@ -1648,35 +999,15 @@
         "potassium": 121
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Cool"
-        ],
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Cool"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "increases",
-          "pitta": "balances",
-          "kapha": "neutral"
-        },
-        "bestFor": [
-          "Pitta"
-        ]
+        "doshaEffect": { "vata": "increases", "pitta": "balances", "kapha": "neutral" },
+        "bestFor": ["Pitta"]
       },
-      "serving": {
-        "size": 126,
-        "unit": "g",
-        "description": "½ block"
-      },
-      "tags": [
-        "vegan",
-        "high-protein",
-        "calcium-rich"
-      ]
+      "serving": { "size": 126, "unit": "g", "description": "½ block" },
+      "tags": ["vegan", "high-protein", "calcium-rich"]
     },
     {
       "id": "PR007",
@@ -1696,35 +1027,15 @@
         "potassium": 126
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily",
-          "Warm"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Warm"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "increases",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "increases", "kapha": "increases" },
+        "bestFor": ["Vata"]
       },
-      "serving": {
-        "size": 50,
-        "unit": "g",
-        "description": "1 large egg"
-      },
-      "tags": [
-        "complete-protein",
-        "rajasic",
-        "strength-building"
-      ]
+      "serving": { "size": 50, "unit": "g", "description": "1 large egg" },
+      "tags": ["complete-protein", "rajasic", "strength-building"]
     },
     {
       "id": "SP001",
@@ -1744,39 +1055,15 @@
         "potassium": 2080
       },
       "ayurveda": {
-        "rasa": [
-          "Bitter",
-          "Pungent",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Dry"
-        ],
+        "rasa": ["Bitter", "Pungent", "Astringent"],
+        "guna": ["Light", "Dry"],
         "virya": "Warming",
         "vipaka": "Pungent",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Vata", "Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 3,
-        "unit": "g",
-        "description": "1 tsp powder"
-      },
-      "tags": [
-        "tridoshic",
-        "anti-inflammatory",
-        "golden-spice",
-        "medicinal"
-      ]
+      "serving": { "size": 3, "unit": "g", "description": "1 tsp powder" },
+      "tags": ["tridoshic", "anti-inflammatory", "golden-spice", "medicinal"]
     },
     {
       "id": "SP002",
@@ -1796,37 +1083,15 @@
         "potassium": 1788
       },
       "ayurveda": {
-        "rasa": [
-          "Pungent",
-          "Bitter"
-        ],
-        "guna": [
-          "Light",
-          "Dry",
-          "Sharp"
-        ],
+        "rasa": ["Pungent", "Bitter"],
+        "guna": ["Light", "Dry", "Sharp"],
         "virya": "Warming",
         "vipaka": "Pungent",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "neutral",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Vata",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
       },
-      "serving": {
-        "size": 2,
-        "unit": "g",
-        "description": "1 tsp seeds"
-      },
-      "tags": [
-        "digestive-aid",
-        "carminative",
-        "essential-spice"
-      ]
+      "serving": { "size": 2, "unit": "g", "description": "1 tsp seeds" },
+      "tags": ["digestive-aid", "carminative", "essential-spice"]
     },
     {
       "id": "SP003",
@@ -1846,36 +1111,15 @@
         "potassium": 415
       },
       "ayurveda": {
-        "rasa": [
-          "Pungent"
-        ],
-        "guna": [
-          "Light",
-          "Oily",
-          "Sharp"
-        ],
+        "rasa": ["Pungent"],
+        "guna": ["Light", "Oily", "Sharp"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "increases",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Vata",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "increases", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
       },
-      "serving": {
-        "size": 5,
-        "unit": "g",
-        "description": "1 tsp grated"
-      },
-      "tags": [
-        "digestive-fire",
-        "anti-nausea",
-        "universal-medicine"
-      ]
+      "serving": { "size": 5, "unit": "g", "description": "1 tsp grated" },
+      "tags": ["digestive-fire", "anti-nausea", "universal-medicine"]
     },
     {
       "id": "SP004",
@@ -1895,37 +1139,15 @@
         "potassium": 1267
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent",
-          "Bitter"
-        ],
-        "guna": [
-          "Light",
-          "Oily"
-        ],
+        "rasa": ["Sweet", "Astringent", "Bitter"],
+        "guna": ["Light", "Oily"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "neutral",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "neutral", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 2,
-        "unit": "g",
-        "description": "1 tsp seeds"
-      },
-      "tags": [
-        "cooling-spice",
-        "digestive-aid",
-        "pitta-pacifying"
-      ]
+      "serving": { "size": 2, "unit": "g", "description": "1 tsp seeds" },
+      "tags": ["cooling-spice", "digestive-aid", "pitta-pacifying"]
     },
     {
       "id": "SP005",
@@ -1945,38 +1167,15 @@
         "potassium": 1694
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Pungent"
-        ],
-        "guna": [
-          "Light",
-          "Sharp"
-        ],
+        "rasa": ["Sweet", "Pungent"],
+        "guna": ["Light", "Sharp"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "balances" },
+        "bestFor": ["Vata", "Pitta", "Kapha"]
       },
-      "serving": {
-        "size": 2,
-        "unit": "g",
-        "description": "1 tsp seeds"
-      },
-      "tags": [
-        "tridoshic",
-        "after-meal",
-        "digestive",
-        "mouth-freshener"
-      ]
+      "serving": { "size": 2, "unit": "g", "description": "1 tsp seeds" },
+      "tags": ["tridoshic", "after-meal", "digestive", "mouth-freshener"]
     },
     {
       "id": "SP006",
@@ -1996,38 +1195,15 @@
         "potassium": 500
       },
       "ayurveda": {
-        "rasa": [
-          "Bitter",
-          "Astringent",
-          "Sweet"
-        ],
-        "guna": [
-          "Light",
-          "Oily"
-        ],
+        "rasa": ["Bitter", "Astringent", "Sweet"],
+        "guna": ["Light", "Oily"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "neutral",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Vata",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
       },
-      "serving": {
-        "size": 3,
-        "unit": "g",
-        "description": "½ tsp powder"
-      },
-      "tags": [
-        "adaptogen",
-        "rasayana",
-        "stress-relief",
-        "strength"
-      ]
+      "serving": { "size": 3, "unit": "g", "description": "½ tsp powder" },
+      "tags": ["adaptogen", "rasayana", "stress-relief", "strength"]
     },
     {
       "id": "SP007",
@@ -2047,36 +1223,15 @@
         "potassium": 1329
       },
       "ayurveda": {
-        "rasa": [
-          "Pungent"
-        ],
-        "guna": [
-          "Light",
-          "Dry",
-          "Sharp"
-        ],
+        "rasa": ["Pungent"],
+        "guna": ["Light", "Dry", "Sharp"],
         "virya": "Warming",
         "vipaka": "Pungent",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "increases",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Vata",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "increases", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
       },
-      "serving": {
-        "size": 1,
-        "unit": "g",
-        "description": "¼ tsp ground"
-      },
-      "tags": [
-        "bioavailability",
-        "kapha-pacifying",
-        "warming"
-      ]
+      "serving": { "size": 1, "unit": "g", "description": "¼ tsp ground" },
+      "tags": ["bioavailability", "kapha-pacifying", "warming"]
     },
     {
       "id": "OL001",
@@ -2096,38 +1251,15 @@
         "potassium": 0
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Bitter",
-          "Astringent"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily",
-          "Warm",
-          "Sharp"
-        ],
+        "rasa": ["Sweet", "Bitter", "Astringent"],
+        "guna": ["Heavy", "Oily", "Warm", "Sharp"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "increases",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "increases", "kapha": "increases" },
+        "bestFor": ["Vata"]
       },
-      "serving": {
-        "size": 5,
-        "unit": "ml",
-        "description": "1 tsp"
-      },
-      "tags": [
-        "warming-oil",
-        "abhyanga",
-        "vata-pacifying"
-      ]
+      "serving": { "size": 5, "unit": "ml", "description": "1 tsp" },
+      "tags": ["warming-oil", "abhyanga", "vata-pacifying"]
     },
     {
       "id": "OL002",
@@ -2147,37 +1279,15 @@
         "potassium": 0
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily",
-          "Cool",
-          "Smooth"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Cool", "Smooth"],
         "virya": "Cooling",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "balances",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata",
-          "Pitta"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "balances", "kapha": "increases" },
+        "bestFor": ["Vata", "Pitta"]
       },
-      "serving": {
-        "size": 5,
-        "unit": "ml",
-        "description": "1 tsp"
-      },
-      "tags": [
-        "cooling-oil",
-        "pitta-pacifying",
-        "hair-skin"
-      ]
+      "serving": { "size": 5, "unit": "ml", "description": "1 tsp" },
+      "tags": ["cooling-oil", "pitta-pacifying", "hair-skin"]
     },
     {
       "id": "OL003",
@@ -2197,37 +1307,15 @@
         "potassium": 0
       },
       "ayurveda": {
-        "rasa": [
-          "Pungent",
-          "Bitter"
-        ],
-        "guna": [
-          "Light",
-          "Sharp",
-          "Warm"
-        ],
+        "rasa": ["Pungent", "Bitter"],
+        "guna": ["Light", "Sharp", "Warm"],
         "virya": "Warming",
         "vipaka": "Pungent",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "increases",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Vata",
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "increases", "kapha": "balances" },
+        "bestFor": ["Vata", "Kapha"]
       },
-      "serving": {
-        "size": 5,
-        "unit": "ml",
-        "description": "1 tsp"
-      },
-      "tags": [
-        "warming-oil",
-        "kapha-pacifying",
-        "north-indian"
-      ]
+      "serving": { "size": 5, "unit": "ml", "description": "1 tsp" },
+      "tags": ["warming-oil", "kapha-pacifying", "north-indian"]
     },
     {
       "id": "OL004",
@@ -2247,36 +1335,15 @@
         "potassium": 52
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Astringent"
-        ],
-        "guna": [
-          "Light",
-          "Dry",
-          "Sharp"
-        ],
+        "rasa": ["Sweet", "Astringent"],
+        "guna": ["Light", "Dry", "Sharp"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "neutral",
-          "pitta": "neutral",
-          "kapha": "balances"
-        },
-        "bestFor": [
-          "Kapha"
-        ]
+        "doshaEffect": { "vata": "neutral", "pitta": "neutral", "kapha": "balances" },
+        "bestFor": ["Kapha"]
       },
-      "serving": {
-        "size": 21,
-        "unit": "g",
-        "description": "1 tbsp"
-      },
-      "tags": [
-        "natural-sweetener",
-        "medicinal",
-        "never-heat"
-      ]
+      "serving": { "size": 21, "unit": "g", "description": "1 tbsp" },
+      "tags": ["natural-sweetener", "medicinal", "never-heat"]
     },
     {
       "id": "OL005",
@@ -2296,34 +1363,15 @@
         "potassium": 460
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "neutral",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
       },
-      "serving": {
-        "size": 10,
-        "unit": "g",
-        "description": "1 small piece"
-      },
-      "tags": [
-        "iron-rich",
-        "unrefined",
-        "winter-sweetener"
-      ]
+      "serving": { "size": 10, "unit": "g", "description": "1 small piece" },
+      "tags": ["iron-rich", "unrefined", "winter-sweetener"]
     },
     {
       "id": "OL006",
@@ -2343,37 +1391,15 @@
         "potassium": 813
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet",
-          "Bitter"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily",
-          "Smooth"
-        ],
+        "rasa": ["Sweet", "Bitter"],
+        "guna": ["Heavy", "Oily", "Smooth"],
         "virya": "Warming",
         "vipaka": "Pungent",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "neutral",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
       },
-      "serving": {
-        "size": 10,
-        "unit": "g",
-        "description": "1 tbsp ground"
-      },
-      "tags": [
-        "omega-3",
-        "fiber-rich",
-        "seed",
-        "heart-healthy"
-      ]
+      "serving": { "size": 10, "unit": "g", "description": "1 tbsp ground" },
+      "tags": ["omega-3", "fiber-rich", "seed", "heart-healthy"]
     },
     {
       "id": "OL007",
@@ -2393,36 +1419,15 @@
         "potassium": 733
       },
       "ayurveda": {
-        "rasa": [
-          "Sweet"
-        ],
-        "guna": [
-          "Heavy",
-          "Oily",
-          "Warm"
-        ],
+        "rasa": ["Sweet"],
+        "guna": ["Heavy", "Oily", "Warm"],
         "virya": "Warming",
         "vipaka": "Sweet",
-        "doshaEffect": {
-          "vata": "balances",
-          "pitta": "neutral",
-          "kapha": "increases"
-        },
-        "bestFor": [
-          "Vata"
-        ]
+        "doshaEffect": { "vata": "balances", "pitta": "neutral", "kapha": "increases" },
+        "bestFor": ["Vata"]
       },
-      "serving": {
-        "size": 28,
-        "unit": "g",
-        "description": "~23 almonds"
-      },
-      "tags": [
-        "brain-tonic",
-        "ojas-building",
-        "sattvic",
-        "soaked-best"
-      ]
+      "serving": { "size": 28, "unit": "g", "description": "~23 almonds" },
+      "tags": ["brain-tonic", "ojas-building", "sattvic", "soaked-best"]
     }
   ]
 }
