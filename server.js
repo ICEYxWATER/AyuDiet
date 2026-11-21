@@ -2,13 +2,22 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import connectDB from './db.js';
-import foodRoutes from './foodRoutes.js';
-import patientRoutes from './patientRoutes.js';
-import dietPlanRoutes from './dietPlanRoutes.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+import connectDB from './config/db.js';
+import foodRoutes from './routes/foodRoutes.js';
+import patientRoutes from './routes/patientRoutes.js';
+import dietPlanRoutes from './routes/dietPlanRoutes.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Load env configuration
 dotenv.config();
+
+// Connect to MongoDB
+connectDB();
 
 const app = express();
 
@@ -67,17 +76,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = Number(process.env.PORT) || 5000;
-
-const start = async () => {
-  await connectDB();
-  app.listen(PORT, () => {
-    console.log(`AyuDiet API running on port ${PORT} in ${process.env.NODE_ENV || 'development'} mode.`);
-    console.log(`Health check: http://localhost:${PORT}/api/health`);
-  });
-};
-
-start().catch((error) => {
-  console.error(`Unable to start AyuDiet API: ${error.message}`);
-  process.exit(1);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`🚀 AyuDiet Backend running on port ${PORT} in ${process.env.NODE_ENV || 'development'} mode.`);
+  console.log(`👉 Health check: http://localhost:${PORT}/api/health`);
+  console.log(`🥗 Foods endpoint: http://localhost:${PORT}/api/foods`);
 });
