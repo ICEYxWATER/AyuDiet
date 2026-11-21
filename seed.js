@@ -4,9 +4,9 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import Food from './Food.js';
-import Patient from './Patient.js';
-import DietPlan from './DietPlan.js';
+import Food from '../models/Food.js';
+import Patient from '../models/Patient.js';
+import DietPlan from '../models/DietPlan.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -44,7 +44,7 @@ const seedDatabase = async () => {
     console.log(` Connected to MongoDB: ${MONGO_URI}`);
 
     // Read the food database JSON file
-    const jsonPath = path.join(__dirname, 'food-database.json');
+    const jsonPath = path.join(__dirname, '../../api/food-database.json');
     if (!fs.existsSync(jsonPath)) {
       throw new Error(`food-database.json not found at ${jsonPath}`);
     }
@@ -52,7 +52,13 @@ const seedDatabase = async () => {
     const rawData = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
     console.log(`📄 Found ${rawData.foods.length} foods across ${rawData.categories.length} categories.`);
 
-    // Upsert foods by stable code so rerunning the seed preserves unrelated records.
+    // 1. Clear existing data
+    console.log('🧹 Clearing existing collections...');
+    await Food.deleteMany({});
+    await Patient.deleteMany({});
+    await DietPlan.deleteMany({});
+
+    // 2. Format foods for Mongoose insertion
     const foodsToInsert = rawData.foods.map((f) => ({
       code: f.id,
       name: f.name,
@@ -73,10 +79,7 @@ const seedDatabase = async () => {
       tags: f.tags || []
     }));
 
-    await Food.bulkWrite(foodsToInsert.map((food) => ({
-      updateOne: { filter: { code: food.code }, update: { $set: food }, upsert: true }
-    })));
-    const insertedFoods = await Food.find({ code: { $in: foodsToInsert.map((food) => food.code) } });
+    const insertedFoods = await Food.insertMany(foodsToInsert);
     console.log(`✅ Seeded ${insertedFoods.length} foods into MongoDB.`);
 
     // Map inserted foods by code for easy reference
@@ -87,7 +90,7 @@ const seedDatabase = async () => {
 
     // 3. Seed Demo Patient (from InnovaThon Prototype Slide 3: "Ananya Rao · 32 years")
     console.log('👤 Seeding demo patients...');
-    const patient1 = await Patient.findOneAndUpdate({ contactEmail: 'ananya.rao@example.com' }, { $setOnInsert: {
+    const patient1 = await Patient.create({
       name: 'Ananya Rao',
       age: 32,
       gender: 'Female',
@@ -99,9 +102,9 @@ const seedDatabase = async () => {
       healthConditions: ['Mild acid reflux in autumn', 'Irregular digestion'],
       dietaryRestrictions: ['Vegetarian'],
       followUps: []
-    } }, { new: true, upsert: true, runValidators: true, setDefaultsOnInsert: true });
+    });
 
-    const patient2 = await Patient.findOneAndUpdate({ contactEmail: 'rohit.sharma@example.com' }, { $setOnInsert: {
+    const patient2 = await Patient.create({
       name: 'Rohit Sharma',
       age: 45,
       gender: 'Male',
@@ -112,7 +115,7 @@ const seedDatabase = async () => {
       healthConditions: ['Weight management', 'Water retention'],
       dietaryRestrictions: ['Low dairy'],
       followUps: []
-    } }, { new: true, upsert: true, runValidators: true, setDefaultsOnInsert: true });
+    });
 
     // 4. Seed Demo Meal Plan (Exact Match with Hackathon Slide 3)
     // Breakfast: Cooked oats 180g (128 kcal | Sweet / Warming)
@@ -202,7 +205,8 @@ const seedDatabase = async () => {
       }
     ];
 
-    const demoPlan = await DietPlan.findOneAndUpdate({ patient: patient1._id }, { $setOnInsert: {
+    const demoPlan = await DietPlan.create({
+      patient: patient1._id,
       planTitle: 'Pitta-Vata Balancing Autumn Plan',
       season: 'Sharad (Autumn)',
       targetPrakriti: 'Vata-Pitta',
@@ -215,18 +219,17 @@ const seedDatabase = async () => {
         fat: 6.1
       },
       practitionerNotes: 'Prioritize warm, moist meals with sweet and cooling attributes to pacify Pitta without aggravating Vata. Drink warm water between meals.'
-    } }, { new: true, upsert: true, runValidators: true, setDefaultsOnInsert: true });
+    });
 
     patient1.activePlanId = demoPlan._id;
     await patient1.save();
 
     console.log(' Demo plan created with status: Draft (Totals: 730 kcal, 31.4g protein, 137.3g carbs, 6.1g fat)');
     console.log('🎉 Seeding successfully completed!');
+    process.exit(0);
   } catch (error) {
     console.error('❌ Error during seeding:', error);
     process.exit(1);
-  } finally {
-    await mongoose.disconnect();
   }
 };
 
