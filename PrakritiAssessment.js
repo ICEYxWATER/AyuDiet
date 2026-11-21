@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
 const questionResponseSchema = new mongoose.Schema(
   {
@@ -8,33 +8,34 @@ const questionResponseSchema = new mongoose.Schema(
     doshaScores: {
       vata: { type: Number, default: 0 },
       pitta: { type: Number, default: 0 },
-      kapha: { type: Number, default: 0 },
-    },
+      kapha: { type: Number, default: 0 }
+    }
   },
   { _id: false }
 );
 
 const prakritiAssessmentSchema = new mongoose.Schema(
   {
-    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true, index: true },
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true, index: true },
     responses: [questionResponseSchema],
     totalScores: {
       vata: { type: Number, default: 0 },
       pitta: { type: Number, default: 0 },
-      kapha: { type: Number, default: 0 },
+      kapha: { type: Number, default: 0 }
     },
     dominantDosha: {
       type: String,
-      enum: ["Vata", "Pitta", "Kapha", "Vata-Pitta", "Pitta-Kapha", "Vata-Kapha", "Tridoshic"],
+      enum: ['Vata', 'Pitta', 'Kapha', 'Vata-Pitta', 'Pitta-Kapha', 'Vata-Kapha', 'Tridoshic']
     },
     secondaryDosha: {
       type: String,
-      enum: ["Vata", "Pitta", "Kapha", null],
-      default: null,
+      enum: ['Vata', 'Pitta', 'Kapha', null],
+      default: null
     },
-    notes: String,
+    notes: String
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("PrakritiAssessment", prakritiAssessmentSchema);
+const PrakritiAssessment = mongoose.model('PrakritiAssessment', prakritiAssessmentSchema);
+export default PrakritiAssessment;

@@ -4,20 +4,23 @@ import {
   getFoodById,
   getCategories,
   getDoshaRecommendations,
-  createFood
+  createFood,
+  updateFood,
+  deleteFood
 } from './foodController.js';
+import { requirePractitioner } from './auth.js';
 
 const router = express.Router();
 
-// Specific routes first
+// Public Read-Only Routes (Accessible by Frontend Clients / Patients)
 router.get('/categories/summary', getCategories);
 router.get('/dosha/:dosha', getDoshaRecommendations);
-
-// General collection & item routes
-router.route('/')
-  .get(getFoods)
-  .post(createFood);
-
+router.get('/', getFoods);
 router.get('/:identifier', getFoodById);
+
+// Protected Mutation Routes (ONLY Authorized Practitioners / Admins at Backend)
+router.post('/', requirePractitioner, createFood);
+router.put('/:identifier', requirePractitioner, updateFood);
+router.delete('/:identifier', requirePractitioner, deleteFood);
 
 export default router;

@@ -3,7 +3,7 @@ import Food from './Food.js';
 /**
  * @desc   Get all foods with optional filters (category, dosha, search, virya, rasa)
  * @route  GET /api/foods
- * @access Public
+ * @access Public (read-only for clients)
  */
 export const getFoods = async (req, res) => {
   try {
@@ -198,22 +198,87 @@ export const getDoshaRecommendations = async (req, res) => {
 };
 
 /**
- * @desc   Create new food item (Practitioner / Admin tool)
+ * @desc   Create new food item
  * @route  POST /api/foods
- * @access Public
+ * @access Protected (Practitioner / Admin only)
  */
 export const createFood = async (req, res) => {
   try {
     const food = await Food.create(req.body);
     res.status(201).json({
       success: true,
-      message: 'Food created successfully',
+      message: 'Food created successfully by authorized practitioner',
       data: food
     });
   } catch (error) {
     res.status(400).json({
       success: false,
       message: 'Failed to create food item',
+      error: error.message
+    });
+  }
+};
+
+/**
+ * @desc   Update food item attributes
+ * @route  PUT /api/foods/:identifier
+ * @access Protected (Practitioner / Admin only)
+ */
+export const updateFood = async (req, res) => {
+  try {
+    const { identifier } = req.params;
+    const query = identifier.match(/^[0-9a-fA-F]{24}$/)
+      ? { _id: identifier }
+      : { code: identifier.toUpperCase() };
+
+    const food = await Food.findOneAndUpdate(query, req.body, {
+      new: true,
+      runValidators: true
+    });
+
+    if (!food) {
+      return res.status(404).json({ success: false, message: 'Food item not found' });
+    }
+
+    res.json({
+      success: true,
+      message: 'Food item updated successfully',
+      data: food
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: 'Failed to update food item',
+      error: error.message
+    });
+  }
+};
+
+/**
+ * @desc   Delete food item
+ * @route  DELETE /api/foods/:identifier
+ * @access Protected (Practitioner / Admin only)
+ */
+export const deleteFood = async (req, res) => {
+  try {
+    const { identifier } = req.params;
+    const query = identifier.match(/^[0-9a-fA-F]{24}$/)
+      ? { _id: identifier }
+      : { code: identifier.toUpperCase() };
+
+    const food = await Food.findOneAndDelete(query);
+    if (!food) {
+      return res.status(404).json({ success: false, message: 'Food item not found' });
+    }
+
+    res.json({
+      success: true,
+      message: 'Food item deleted successfully'
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: 'Failed to delete food item',
       error: error.message
     });
   }
